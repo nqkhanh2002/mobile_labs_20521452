@@ -31,7 +31,7 @@ public class CustomListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view = inflater.inflate(R.layout.activity_custom_list_view, null);
+        view = inflater.inflate(R.layout.activity_list_view, null);
         return view;
     }
 }

@@ -31,7 +31,7 @@ public class CustomGridAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view = inflater.inflate(R.layout.activity_custom_grid_view,null);
+        view = inflater.inflate(R.layout.activity_grid_view,null);
         return view;
     }
 }

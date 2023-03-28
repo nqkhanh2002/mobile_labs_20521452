@@ -9,6 +9,6 @@ public class Custom_Grid_View extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_custom_grid_view);
+        setContentView(R.layout.activity_grid_view);
     }
 }
