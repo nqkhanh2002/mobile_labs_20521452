@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+<!--    <EditText-->
+<!--        android:id="@+id/textview"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:inputType="text"/>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
