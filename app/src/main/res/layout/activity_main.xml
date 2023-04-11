@@ -25,7 +25,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/grossSalaryWrapper"
+        android:id="@+id/GrossSalary"
         android:layout_width="match_parent"
         app:hintEnabled="true"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
         android:text="Convert Gross to Net"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/grossSalaryWrapper" />
+        app:layout_constraintTop_toBottomOf="@id/GrossSalary" />
 
     <TextView
         android:id="@+id/line"

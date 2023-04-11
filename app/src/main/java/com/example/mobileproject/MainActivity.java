@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextInputLayout text = findViewById(R.id.YourName);
-        TextInputLayout number = findViewById(R.id.grossSalaryWrapper);
+        TextInputLayout number = findViewById(R.id.GrossSalary);
         listView = findViewById(R.id.customListView);
         Button btn = (Button) findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {

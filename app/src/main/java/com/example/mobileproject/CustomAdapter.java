@@ -8,37 +8,39 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import java.util.ArrayList;
 
-public class CustomAdapter extends BaseAdapter {
-    Context context;
-    ArrayList<Person> per;
-    LayoutInflater inflater;
 
-    public CustomAdapter(Context ctx, ArrayList<Person> p) {
-        this.context = ctx;
-        this.per = p;
-        inflater = LayoutInflater.from(ctx);
+public class CustomAdapter extends BaseAdapter {
+    private final Context mContext;
+    private final ArrayList<Person> mPersons;
+    private final LayoutInflater mInflater;
+
+    public CustomAdapter(Context context, ArrayList<Person> persons) {
+        mContext = context;
+        mPersons = persons;
+        mInflater = LayoutInflater.from(context);
     }
 
     @Override
     public int getCount() {
-        return per.size();
+        return mPersons.size();
     }
 
     @Override
-    public Object getItem(int i) {
-        return per.get(i);
+    public Object getItem(int position) {
+        return mPersons.get(position);
     }
 
     @Override
-    public long getItemId(int i) {
-        return 0;
+    public long getItemId(int position) {
+        return position;
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        view = inflater.inflate(R.layout.activity_main2,null);
-        TextView text = view.findViewById(R.id.nameT);
-        text.setText(per.get(i).getFullName() + ": " + String.format("%.2f",per.get(i).getNSalary()));
-        return view;
+    public View getView(int position, View convertView, ViewGroup parent) {
+        convertView = mInflater.inflate(R.layout.activity_main2,null);
+        TextView text = convertView.findViewById(R.id.NameText);
+        text.setText(mPersons.get(position).getFullName() + ": " + String.format("%.2f",mPersons.get(position).getNetSalary()));
+        return convertView;
     }
+
 }
