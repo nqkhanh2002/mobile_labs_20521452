@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -20,8 +21,12 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
@@ -54,6 +59,28 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+            }
+        });
+        btnList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                reference.get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()){
+                            QuerySnapshot snapshot = task.getResult();
+                            List<Item> list = new ArrayList<>();
+                            for (QueryDocumentSnapshot doc : snapshot) {
+                                Item item = new Item();
+                                item.setName(doc.get("name").toString());
+                                item.setPhone(doc.get("phone").toString());
+                                list.add(item);
+                            }
+                            ArrayAdapter<Item> adapter = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_list_item_1,list);
+                            listView.setAdapter(adapter);
+                        }
+                    }
+                });
             }
         });
     }
