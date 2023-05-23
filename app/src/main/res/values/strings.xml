@@ -13,4 +13,7 @@
     <string name="email">Email</string>
     <string name="register">Register</string>
     <string name="logout">Logout</string>
+    <string name="fullname">Fullname</string>
+    <string name="phone">Phone</string>
+    <string name="name">Full Name</string>
 </resources>

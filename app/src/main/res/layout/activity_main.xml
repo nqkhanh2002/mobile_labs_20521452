@@ -11,7 +11,15 @@
         android:id="@+id/user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mobile Lab 04 - 20521452"
+        android:text="Welcome to Home Page"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        />
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
         android:textStyle="bold"
         android:textSize="30dp"
         />

@@ -18,21 +18,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
+
             android:hint="@string/prompt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/prompt_password" />
